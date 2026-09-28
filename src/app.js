@@ -75,8 +75,8 @@ app.use("/api/cities", getCities);
 
 
 // Default route
-app.get("/", (req, res) => {
-    res.send("API is running...");
+app.get(["/", "/api"], (req, res) => {
+    res.json({ message: "API is running..." });
 });
 
 // Error handler (always last)
